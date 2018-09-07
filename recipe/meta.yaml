@@ -1,5 +1,4 @@
 {% set version = '4.8.0' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,27 +9,30 @@ package:
 source:
   fn: plotly_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/plotly_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/plotly/plotly_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/plotly_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/plotly/plotly_{{ version }}.tar.gz
   sha256: 78f90282c831bbbb675ed4811fb506a98dd05e37251fabd42ebc263c80bae8a6
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
+    - r-rcolorbrewer
     - r-base64enc
     - r-crosstalk
     - r-data.table
     - r-digest
     - r-dplyr
-    - r-ggplot2 >=2.2.1
+    - r-ggplot2 >=3.0.0
     - r-hexbin
     - r-htmltools
     - r-htmlwidgets >=1.2
@@ -40,21 +42,20 @@ requirements:
     - r-magrittr
     - r-promises
     - r-purrr
-    - r-rcolorbrewer
     - r-rlang
     - r-scales
     - r-tibble
     - r-tidyr
     - r-viridislite
-
   run:
     - r-base
+    - r-rcolorbrewer
     - r-base64enc
     - r-crosstalk
     - r-data.table
     - r-digest
     - r-dplyr
-    - r-ggplot2 >=2.2.1
+    - r-ggplot2 >=3.0.0
     - r-hexbin
     - r-htmltools
     - r-htmlwidgets >=1.2
@@ -64,7 +65,6 @@ requirements:
     - r-magrittr
     - r-promises
     - r-purrr
-    - r-rcolorbrewer
     - r-rlang
     - r-scales
     - r-tibble
@@ -73,14 +73,13 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('plotly')"  # [not win]
+    - $R -e "library('plotly')"           # [not win]
     - "\"%R%\" -e \"library('plotly')\""  # [win]
 
 about:
-  home: https://plot.ly/r, https://cpsievert.github.io/plotly_book/, https://github.com/ropensci/plotly
+  home: https://plot.ly/r, https://cpsievert.github.io/plotly_book/, https://github.com/ropensci/plotly#readme
   license: MIT
-  summary: |
-    Easily translate 'ggplot2' graphs to an interactive web-based version and/or create
+  summary: Easily translate 'ggplot2' graphs to an interactive web-based version and/or create
     custom web-based visualizations directly from R. Once uploaded to a 'plotly' account,
     'plotly' graphs (and the data behind them) can be viewed and modified in a web browser.
   license_family: MIT
@@ -91,4 +90,5 @@ extra:
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
     - halldc
