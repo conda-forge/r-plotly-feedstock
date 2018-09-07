@@ -1,4 +1,4 @@
-{% set version = '4.7.1' %}
+{% set version = '4.8.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/plotly_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/plotly/plotly_{{ version }}.tar.gz
-  sha256: 7cd4b040f9bfd9356a8a2aba59ccf318cae6b5d94ded7463e2e823c10fa74972
+  sha256: 78f90282c831bbbb675ed4811fb506a98dd05e37251fabd42ebc263c80bae8a6
 
 build:
   number: 0
@@ -25,7 +25,6 @@ build:
 requirements:
   build:
     - r-base
-    - r-rcolorbrewer
     - r-base64enc
     - r-crosstalk
     - r-data.table
@@ -34,12 +33,15 @@ requirements:
     - r-ggplot2 >=2.2.1
     - r-hexbin
     - r-htmltools
-    - r-htmlwidgets >=0.9
+    - r-htmlwidgets >=1.2
     - r-httr
     - r-jsonlite
     - r-lazyeval >=0.2.0
     - r-magrittr
+    - r-promises
     - r-purrr
+    - r-rcolorbrewer
+    - r-rlang
     - r-scales
     - r-tibble
     - r-tidyr
@@ -47,7 +49,6 @@ requirements:
 
   run:
     - r-base
-    - r-rcolorbrewer
     - r-base64enc
     - r-crosstalk
     - r-data.table
@@ -56,12 +57,15 @@ requirements:
     - r-ggplot2 >=2.2.1
     - r-hexbin
     - r-htmltools
-    - r-htmlwidgets >=0.9
+    - r-htmlwidgets >=1.2
     - r-httr
     - r-jsonlite
     - r-lazyeval >=0.2.0
     - r-magrittr
+    - r-promises
     - r-purrr
+    - r-rcolorbrewer
+    - r-rlang
     - r-scales
     - r-tibble
     - r-tidyr
@@ -87,3 +91,4 @@ extra:
     - bgruening
     - daler
     - jdblischak
+    - halldc
