@@ -1,25 +1,21 @@
 About r-plotly
 ==============
 
-Home: https://plot.ly/r, https://cpsievert.github.io/plotly_book/, https://github.com/ropensci/plotly
+Home: https://plot.ly/r, https://cpsievert.github.io/plotly_book/, https://github.com/ropensci/plotly#readme
 
 Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Easily translate 'ggplot2' graphs to an interactive web-based version and/or create
-custom web-based visualizations directly from R. Once uploaded to a 'plotly' account,
-'plotly' graphs (and the data behind them) can be viewed and modified in a web browser.
-
+Summary: Easily translate 'ggplot2' graphs to an interactive web-based version and/or create custom web-based visualizations directly from R. Once uploaded to a 'plotly' account, 'plotly' graphs (and the data behind them) can be viewed and modified in a web browser.
 
 
 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-plotly-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-plotly-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-plotly-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-plotly-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-plotly-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-plotly-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-plotly-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-plotly-feedstock)
 
 Current release info
 ====================
