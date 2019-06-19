@@ -85,6 +85,7 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
+    - halldc
 
 # Package: plotly
 # Title: Create Interactive Web Graphics via 'plotly.js'
