@@ -1,4 +1,4 @@
-{% set version = '4.9.0' %}
+{% set version = '4.9.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/plotly_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/plotly/plotly_{{ version }}.tar.gz
-  sha256: f761148338231f210fd7fe2f8325ffe9cfdaaaeddd7b933b65c44ebb4f85e2cf
+  sha256: 85a08c64d1bf839786951b3574986eacce78dacd589f2bef4b38208e49554d3d
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -81,6 +81,9 @@ about:
   summary: Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to
     the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar of graphics.
   license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
@@ -89,7 +92,7 @@ extra:
 
 # Package: plotly
 # Title: Create Interactive Web Graphics via 'plotly.js'
-# Version: 4.9.0
+# Version: 4.9.1
 # Authors@R: c(person("Carson", "Sievert", role = c("aut", "cre"), email = "cpsievert1@gmail.com", comment = c(ORCID = "0000-0002-4958-2844")), person("Chris", "Parmer", role = "aut", email = "chris@plot.ly"), person("Toby", "Hocking", role = "aut", email = "tdhock5@gmail.com"), person("Scott", "Chamberlain", role = "aut", email = "myrmecocystus@gmail.com"), person("Karthik", "Ram", role = "aut", email = "karthik.ram@gmail.com"), person("Marianne", "Corvellec", role = "aut", email = "marianne.corvellec@igdore.org", comment = c(ORCID = "0000-0002-1994-3581")), person("Pedro", "Despouy", role = "aut", email = "pedro@plot.ly"), person("Plotly Technologies Inc.", role = "cph"))
 # License: MIT + file LICENSE
 # Description: Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar of graphics.
@@ -102,8 +105,8 @@ extra:
 # RoxygenNote: 6.1.1
 # Encoding: UTF-8
 # NeedsCompilation: no
-# Packaged: 2019-04-10 17:54:42 UTC; cpsievert
+# Packaged: 2019-11-07 17:19:06 UTC; cpsievert
 # Author: Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>), Chris Parmer [aut], Toby Hocking [aut], Scott Chamberlain [aut], Karthik Ram [aut], Marianne Corvellec [aut] (<https://orcid.org/0000-0002-1994-3581>), Pedro Despouy [aut], Plotly Technologies Inc. [cph]
 # Maintainer: Carson Sievert <cpsievert1@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2019-04-10 19:33:05 UTC
+# Date/Publication: 2019-11-07 19:00:02 UTC
