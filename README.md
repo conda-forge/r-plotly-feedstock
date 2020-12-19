@@ -5,11 +5,9 @@ Home: https://plotly-r.com, https://github.com/ropensci/plotly#readme, https://p
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-plotly-feedstock/blob/master/LICENSE.txt)
 
 Summary: Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar of graphics.
-
-
 
 Current build status
 ====================
