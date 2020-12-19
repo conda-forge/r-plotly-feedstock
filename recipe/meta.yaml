@@ -1,4 +1,4 @@
-{% set version = "4.9.2.1" %}
+{% set version = "4.9.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/plotly_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/plotly/plotly_{{ version }}.tar.gz
-  sha256: f45eae325ab7e7924b0be098bad866ce003d657cf63e137104401c2dd4401db8
+  sha256: 9c92c4e59663d04f9111e0b781e937ac85202bbf9d49ff3824fd84845124f427
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -78,8 +78,7 @@ test:
 about:
   home: https://plotly-r.com, https://github.com/ropensci/plotly#readme, https://plot.ly/r
   license: MIT
-  summary: Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar
-    of graphics.
+  summary: Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar of graphics.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
