@@ -1,4 +1,4 @@
-{% set version = "4.10.2" %}
+{% set version = "4.10.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/plotly_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/plotly/plotly_{{ version }}.tar.gz
-  sha256: 2b809ac218e70be4ce121fefb70357b91116b55efec7cb7809ae24d49d8f5278
+  sha256: 8b7a6c26443088c8aae4624e01cf726a91fee875c2e60b6c439375d1adaa5d8f
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
